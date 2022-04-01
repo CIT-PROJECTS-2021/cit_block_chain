@@ -1,5 +1,6 @@
 from flask import Flask, jsonify, request
 from app.cit_block import CITcoin
+from errors.error_handler import errors
 
 
 
@@ -9,6 +10,7 @@ cit_coin = CITcoin()
 
 # Create a web app
 app = Flask(__name__)
+app.register_blueprint(errors)
 
 # Register a node
 @app.route('/register_node', methods=['POST'])
