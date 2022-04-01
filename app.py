@@ -1,5 +1,4 @@
 # create CIT coin crypto currency
-
 import hashlib
 from datetime import datetime
 import json
