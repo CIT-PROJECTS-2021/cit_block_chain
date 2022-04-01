@@ -1,4 +1,4 @@
-# cit_block_chain
+# CIT Block Chain
 CITCoin for CIT Block chain
 
 
@@ -20,6 +20,12 @@ python app.py
 |/chain | Get the full block chain | 200 | { 'chain': <list> } | None
 |/nodes/resolve | Consensus | 200 | { 'message': 'Our chain was replaced', 'new_chain': <list> } | None
 
+
+### Contributing
+To contribute to this project, please fork the repository and make a pull request.
+
+### License
+[MIT](/LICENSE)
 
 
 
