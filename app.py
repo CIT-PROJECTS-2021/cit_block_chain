@@ -225,7 +225,7 @@ def main():
     
 
     # Run the app
-    app.run(host='localhost', port=8000)
+    app.run()
 
 
 if __name__ == '__main__':
