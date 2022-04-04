@@ -102,6 +102,22 @@ def consensus():
 
     return jsonify(response), 200
 
+# transfer from one person to anther peprson 
+@app.route('/transactions/transfer', methods=['POST'])
+def transfer():
+    values = request.get_json()
+
+    # Check that the required fields are in the POST'ed data
+    required = ['sender', 'recipient', 'amount']
+    if not all(k in values for k in required):
+        return 'Missing values', 400
+
+    # Create a new transaction
+    index = cit_coin.new_transaction(values['sender'], values['recipient'], values['amount'])
+
+    response = {'message': f'Transaction will be added to Block {index}'}
+    return jsonify(response), 201
+
 
 # Run the app
 if __name__ == '__main__':
